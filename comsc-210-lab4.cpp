@@ -5,6 +5,7 @@
 
 using namespace std;
 
+//struct declaration
 struct Color 
 {
     int Red;
@@ -12,21 +13,19 @@ struct Color
     int Blue;
 };
 
+//Function prototypes
 void struct_generator(int n, vector<Color>& myVec1);
 void data_display(vector<Color>& myVec1);
 
-const int MIN = 25, MAX = 50;
+const int MIN = 0, MAX = 255;
 
 int main(){
 
-    int num;
-
     vector<Color> myVec1;
+    
+    int n = rand() % (50-25+1) + 25;    
 
-    cout << "How many colors would you like to get: " << endl;
-    cin >> num;
-
-    struct_generator(num, myVec1);
+    struct_generator(n, myVec1);
 
     data_display(myVec1);
 
