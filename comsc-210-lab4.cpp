@@ -52,12 +52,16 @@ void struct_generator(int n, vector<Color>& myVec1){
 }
 
 void data_display(vector<Color>& myVec1){
+
+    cout << "Color #:\tGreen\tRed\tBlue" << endl;
+    cout << "------\t\t-----\t-----\t-----" << endl;
+
     for (int i = 0; i < myVec1.size(); i++){
 
-        cout << "Color #               Red          Blue              Red" << endl;
         
-        cout << myVec1[i].Green << endl;
-        cout << myVec1[i].Blue << endl;
-        cout << myVec1[i].Red << endl;
+        cout << i << "\t";
+        cout << "\t" << myVec1[i].Green;
+        cout << "\t" << myVec1[i].Red;
+        cout << "\t" << myVec1[i].Blue << endl;
     }
 }
