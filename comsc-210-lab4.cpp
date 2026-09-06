@@ -59,7 +59,7 @@ void data_display(vector<Color>& myVec1){
     for (int i = 0; i < myVec1.size(); i++){
 
         
-        cout << i << "\t";
+        cout << i + 1 << "\t";
         cout << "\t" << myVec1[i].Green;
         cout << "\t" << myVec1[i].Red;
         cout << "\t" << myVec1[i].Blue << endl;
