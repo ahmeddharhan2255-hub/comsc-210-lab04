@@ -12,6 +12,8 @@ struct Color
     int Blue;
 };
 
+void struct_generator(int n);
+
 int main(){
 
     vector<Color> myVec1;
@@ -27,5 +29,16 @@ int main(){
     cout << myVec1[0].Red << endl;
 
     return 0;
+
+}
+
+void struct_generator(int n){
+
+    for (int i = 0; i < n; i++){
+        struct color1;
+
+        
+
+    }
 
 }
