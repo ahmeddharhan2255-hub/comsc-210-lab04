@@ -14,6 +14,8 @@ struct Color
 
 void struct_generator(int n);
 
+const int MIN = 25; MAX = 50;
+
 int main(){
 
     vector<Color> myVec1;
@@ -34,11 +36,18 @@ int main(){
 
 void struct_generator(int n){
 
+    int val = rand() % (MAX-MIN+1) + MIN;
+
+
     for (int i = 0; i < n; i++){
-        struct color1;
+        srand(time(0));
+        Color color1;
 
-        
+        color1.Red = val;
+        color1.Blue = val;
+        color1.Green = val;
 
+        myVec1.push_back(color1);
     }
 
 }
