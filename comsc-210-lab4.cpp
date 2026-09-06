@@ -14,6 +14,8 @@ struct Color
 
 int main(){
 
+    vector<Color> myVec1;
+
     Color color1 = {32,45,91};
     
     cout << color1.Red << endl;
