@@ -39,13 +39,12 @@ void struct_generator(int n, vector<Color>& myVec1){
     srand(time(0));
 
     for (int i = 0; i < n; i++){
-        int val = rand() % (MAX-MIN+1) + MIN;
 
         Color color1;
 
-        color1.Red = val;
-        color1.Blue = val;
-        color1.Green = val;
+        color1.Red =  rand() % (MAX-MIN+1) + MIN;
+        color1.Blue =  rand() % (MAX-MIN+1) + MIN;
+        color1.Green =  rand() % (MAX-MIN+1) + MIN;
 
         myVec1.push_back(color1);
     }
@@ -55,6 +54,8 @@ void struct_generator(int n, vector<Color>& myVec1){
 void data_display(vector<Color>& myVec1){
     for (int i = 0; i < myVec1.size(); i++){
 
+        cout << "Color #               Red          Blue              Red" << endl;
+        
         cout << myVec1[i].Green << endl;
         cout << myVec1[i].Blue << endl;
         cout << myVec1[i].Red << endl;
