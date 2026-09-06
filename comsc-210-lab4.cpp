@@ -17,12 +17,13 @@ struct Color
 void struct_generator(int n, vector<Color>& myVec1);
 void data_display(vector<Color>& myVec1);
 
+//declares colors for RGB
 const int MIN = 0, MAX = 255;
 
 int main(){
 
     vector<Color> myVec1;
-    
+
     int n = rand() % (50-25+1) + 25;    
 
     struct_generator(n, myVec1);
@@ -33,6 +34,9 @@ int main(){
 
 }
 
+//creates struct
+//generates random values for each color
+//return that struct and stores in vector
 void struct_generator(int n, vector<Color>& myVec1){
 
     srand(time(0));
@@ -49,7 +53,8 @@ void struct_generator(int n, vector<Color>& myVec1){
     }
 
 }
-
+//iterates through each index in vector
+//displays struct data
 void data_display(vector<Color>& myVec1){
 
     cout << "Color #:\tGreen\tRed\tBlue" << endl;
