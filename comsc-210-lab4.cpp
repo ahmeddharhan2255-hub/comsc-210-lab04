@@ -18,11 +18,13 @@ int main(){
 
     Color color1 = {32,45,91};
     
-    cout << color1.Red << endl;
+    myVec1.push_back(color1);
 
-    cout << color1.Green << endl;
+    cout << myVec1[0].Green << endl;
 
-    cout << color1.Blue << endl;
+    cout << myVec1[0].Blue << endl;
+
+    cout << myVec1[0].Red << endl;
 
     return 0;
 
