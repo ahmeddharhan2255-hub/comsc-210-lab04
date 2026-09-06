@@ -1,4 +1,4 @@
-// COMSC-210 | Lab 3 | Ahmad Dharhan
+// COMSC-210 | Lab 4 | Ahmad Dharhan
 
 #include <iostream>
 #include <vector>
@@ -12,35 +12,35 @@ struct Color
     int Blue;
 };
 
-void struct_generator(int n);
+void struct_generator(int n, vector<Color>& myVec1);
+void data_display(vector<Color>& myVec1);
 
-const int MIN = 25; MAX = 50;
+const int MIN = 25, MAX = 50;
 
 int main(){
 
+    int num;
+
     vector<Color> myVec1;
 
-    Color color1 = {32,45,91};
-    
-    myVec1.push_back(color1);
+    cout << "How many colors would you like to get: " << endl;
+    cin >> num;
 
-    cout << myVec1[0].Green << endl;
+    struct_generator(num, myVec1);
 
-    cout << myVec1[0].Blue << endl;
-
-    cout << myVec1[0].Red << endl;
+    data_display(myVec1);
 
     return 0;
 
 }
 
-void struct_generator(int n){
+void struct_generator(int n, vector<Color>& myVec1){
 
-    int val = rand() % (MAX-MIN+1) + MIN;
-
+    srand(time(0));
 
     for (int i = 0; i < n; i++){
-        srand(time(0));
+        int val = rand() % (MAX-MIN+1) + MIN;
+
         Color color1;
 
         color1.Red = val;
@@ -50,4 +50,13 @@ void struct_generator(int n){
         myVec1.push_back(color1);
     }
 
+}
+
+void data_display(vector<Color>& myVec1){
+    for (int i = 0; i < myVec1.size(); i++){
+
+        cout << myVec1[i].Green << endl;
+        cout << myVec1[i].Blue << endl;
+        cout << myVec1[i].Red << endl;
+    }
 }
